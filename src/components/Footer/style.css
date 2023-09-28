@@ -11,12 +11,14 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 50%;
-    height: 500px;
+    width: 50%; /* Largura em relação ao contêiner pai */
+    height: 0;
+    padding-bottom: 40%; /* Proporção desejada (por exemplo, 2:5) */
     object-fit: cover;
-    background-image: url(../../assets/images/GRAFISMO_coqueiros.png);
+    background-image: url(/src/assets/images/GRAFISMO_coqueiros.png);
     background-repeat: no-repeat;
     background-position: bottom;
+    
 }
 
 .footer__content-main .bg-grafismo2 {

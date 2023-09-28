@@ -1,6 +1,7 @@
-import logoBaixio from '../../assets/images/baixio.png'
-import Container from '../Container';
 import './style.css'
+import Container from '../Container';
+import logoBaixio from '../../assets/images/baixio.png'
+import logoQuereres from '../../assets/images/logo_quereres.png'
 
 const Footer = () => {
   return (
@@ -8,10 +9,15 @@ const Footer = () => {
       <div className='footer__content-main'>
         <Container>
           <div>
-            <img src={logoBaixio} alt="" />
-            <div><span></span> 71 99966.5493</div>
-            <div> reservas@baixioturismo.com.br</div>
-            <div>CNPJ: 20.320.184/0001-84</div>
+            <div>
+              <img src={logoBaixio} alt="" />
+              <div><span></span> 71 99966.5493</div>
+              <div> reservas@baixioturismo.com.br</div>
+              <div>CNPJ: 20.320.184/0001-84</div>
+            </div>
+            <div>
+              <img src={logoQuereres} alt="logomarca da empresa quereres" />
+            </div>
           </div>
         </Container>
         <div className='bg-grafismo'></div>
