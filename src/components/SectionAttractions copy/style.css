@@ -1,0 +1,35 @@
+.posts {
+  
+  background: #e8ddd1;
+  width: 100%;
+  padding: 84px 0;
+  position: relative;
+}
+
+.posts__content {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  max-width: 100%;
+}
+
+.posts__content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.post__background-image {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  background-image: url(../../assets/images/GRAFISMO_ondas.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background: red; */
+  border: 1px solid red;
+  width: 50%;
+  height: 50%;
+}
