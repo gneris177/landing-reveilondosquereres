@@ -1,0 +1,36 @@
+.footer {
+  
+}
+
+.footer__content-main  {
+    position: relative;
+    height: 500px;
+}
+
+.footer__content-main .bg-grafismo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 500px;
+    object-fit: cover;
+    background-image: url(../../assets/images/GRAFISMO_coqueiros.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.footer__content-main .bg-grafismo2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 14%;
+    height: 500px;
+    object-fit: contain;
+    background-image: url(../../assets/images/GRAFISMO_espiral.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.footer__footer {
+    background: #191919;
+}

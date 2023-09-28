@@ -1,0 +1,40 @@
+.line-up__content {
+  padding: 32px 0;
+  background-image: url(../../assets/images/2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.line-up__title {
+  margin: 0;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3rem;
+  font-family: "ade-display";
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
+.line-up__text, .line-up__text.strong {
+  font-size: 1.3rem;
+  text-align: center;
+  color: #fff;
+  line-height: 32px;
+  font-weight: 300;
+  font-family: "montserrate-medium";
+  margin: 0;
+}
+
+.line-up__text.strong { 
+  margin: 6px 0;
+  font-weight: bolder;
+  font-family: "montserrate-bold";
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .line-up__text, strong.line-up__text {
+    font-size: 1rem;
+  }
+}
+

@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+@font-face {
+  font-family: "ade-display";
+  src: url("./assets/fonts/Ade-Display.otf");
+}
+
+@font-face {
+  font-family: "montserrate-medium";
+  src: url("./assets/fonts/montserrat-family-all-versions/Montserrat-Medium.otf");
+}
+
+@font-face {
+  font-family: "montserrate-light";
+  src: url("./assets/fonts/montserrat-family-all-versions/Montserrat-Light.otf");
+}
+
+@font-face {
+  font-family: "montserrate-bold";
+  src: url("./assets/fonts/montserrat-family-all-versions/Montserrat-Bold.otf");
+}
+
+@font-face {
+  font-family: "montserrate-thin";
+  src: url("./assets/fonts/montserrat-family-all-versions/Montserrat-Thin.otf");
+}
+
