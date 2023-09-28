@@ -8,7 +8,6 @@
   border-top: 2px solid #000;
   display: grid;
   grid-template-columns: 50% auto;
-  max-height: 500px;
 }
 
 .attraction__content__list {

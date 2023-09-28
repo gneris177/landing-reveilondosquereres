@@ -38,7 +38,7 @@ const SectionAttractions = () => {
             </li>
           ))}
         </ul>
-        <img className="attraction__image" src={attraction1} alt="" srcset="" />
+        <img className="attraction__image" src={attraction1} alt="" />
       </div>
     </section>
   )
