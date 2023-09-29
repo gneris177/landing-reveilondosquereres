@@ -4,6 +4,7 @@ import logoBaixio from '../../assets/images/baixio.png';
 import logoQuereres from '../../assets/images/logo_quereres.png';
 import grafismoCoqueiro from '../../assets/images/GRAFISMO_coqueiros.png';
 import grafismoEspiral from '../../assets/images/GRAFISMO_espiral.png';
+import piraLogo from '../../assets/images/PIRA.png';
 
 const Footer = () => {
   return (
@@ -29,7 +30,8 @@ const Footer = () => {
       <footer className='footer__footer'>
         <Container>
           <div className='footer__footer__content'>
-            <p>© 2023 Baixio Turismo LTDA. Todos os direitos reservados.</p>
+            <p>© 2023 <strong>Baixio Turismo LTDA</strong>. Todos os direitos reservados.</p>
+            <img className='logo-pira' src={piraLogo} alt='logomarca da agência Pira' />
           </div>
         </Container>
       </footer>

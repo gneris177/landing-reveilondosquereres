@@ -1,3 +1,7 @@
+.attraction {
+  position: relative;
+}
+
 .attraction__wrapper-countdown {
   display: flex;
   justify-content: center;
@@ -85,7 +89,6 @@
   }
 }
 
-
 .attraction__image {
   /* min-height: 40vh; */
   width: 100%;
@@ -94,7 +97,16 @@
 }
 
 .attraction__line-vertical {
+  position: absolute;
+  top: 0;
   width: 2px;
-  height: 80%;
+  height: 72%;
   background: #000;
+}
+
+.attraction__grafismo-folha {
+  position: absolute;
+  width: 13%;
+  top: 80px;
+  left: 0;
 }

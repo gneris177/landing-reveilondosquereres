@@ -52,16 +52,31 @@
 .footer__footer {
 	margin: 0;
 	background: #191919;
+	padding: 16px 0;
 }
 
 .footer__footer__content {
 	display: flex;
 	justify-content: space-between;
-	gap: 16px 16px;
+	align-items: center;
+	gap: 16px 48px;
+	flex-wrap: wrap;
+	padding: 32px 0;
+}
+@media (max-width: 768px) {
+	.footer__footer__content {
+		justify-content: center;
+		align-items: center;
+	}
 }
 
 .footer__footer p {
 	color: #c5aa80;
 	margin: 0;
-	padding: 40px 0;
+	font-family: "montserrate-medium";
+}
+
+.footer__footer__content .logo-pira {
+	width: auto;
+	height: 40px;
 }

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Container from '../Container'
 import Countdown from '../Countdown'
 import attraction1 from '../../assets/images/atracao-1.png'
+import grafismoFolha from '../../assets/images/GRAFISMO_folhas.png'
 import './style.css'
 
 const SectionAttractions = () => {
@@ -15,6 +16,7 @@ const SectionAttractions = () => {
 
   return (
     <section id="attraction" className="attraction">
+      <img src={grafismoFolha} className='attraction__grafismo-folha'/>
       <div className="attraction__line-vertical"></div>
 
       <Container>

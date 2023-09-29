@@ -16,6 +16,7 @@ const SectionPosts = () => {
   return (
     <section className="posts">
       <Container>
+        <div className='instagram'></div>
         <div className="posts__content">
           {images.map((item, i) => <img key={`img-${i}`} src={item.img} alt={item.alt} />)}
         </div>

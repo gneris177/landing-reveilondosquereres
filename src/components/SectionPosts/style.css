@@ -1,7 +1,7 @@
 .posts {
   background: #e8ddd1;
   width: 100%;
-  padding: 84px 0;
+  padding: 136px 0 48px;
   position: relative;
 }
 
@@ -9,7 +9,7 @@
   display: grid;
   align-items: center;
   justify-content: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
   max-width: 100%;
 }
 
@@ -31,4 +31,19 @@
   width: 40%;
   height: 100%;
   z-index: 0;
+}
+
+.instagram {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  z-index: 10;
+  left: 20%;
+  top: 36px;
+}
+
+.instagram::after {
+  content: "instagram";
 }
