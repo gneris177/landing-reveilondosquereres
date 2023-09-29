@@ -18,7 +18,7 @@ const SectionMeetBaxio = () => {
             </p>
             <div className="wrapper-ingresse__button">
               <button className="button">Comprar ingresso</button>
-              <img src={logoIngresse} alt="" />
+              <img src={logoIngresse} className='logo-ingresse' alt="logo da ingresse" />
             </div>
           </div>
     

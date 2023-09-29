@@ -25,7 +25,7 @@
 }
 
 .meet-baxio__content .wrapper-ingresse{
-  padding: 16px 0;
+  padding: 48px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,6 +40,9 @@
 
 .meet-baxio__content .wrapper-ingresse .wrapper-ingresse__text {
   max-width: 50%;
+  font-size: 18px;
+  font-family: "montserrate-light";
+  font-weight: 400;
 }
 @media (max-width: 992px) {
   .meet-baxio__content .wrapper-ingresse .wrapper-ingresse__text {
@@ -48,19 +51,27 @@
   }
 }
 
-
 .meet-baxio__content .wrapper-ingresse .wrapper-ingresse__button {
   display: flex;
   flex-direction: column;
-  padding: 32px 0;
+  height: 100%;
+}
+
+.meet-baxio__content .wrapper-ingresse .wrapper-ingresse__button .logo-ingresse {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .meet-baxio__content .wrapper-ingresse .button{
-  background: transparent;
-  height: 48px;
-  padding: 0 32px;
-  border-radius: 24px;
-  border: 2.3px solid #000;
+    background: transparent;
+    height: 48px;
+    padding: 0 32px;
+    border-radius: 24px;
+    border: 2.3px solid #000;
+    font-family: "montserrate-bold";
+    text-transform: uppercase;
+    font-size: 0.8rem;
 }
 
 .meet-baxio__content .wrapper-video{

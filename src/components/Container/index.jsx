@@ -10,7 +10,7 @@ const Container = ({ children }) => {
     document.querySelector('.header__intro').style.width = `calc(100% - ${marginLeft}px)`
     document.querySelector('.attraction__content__list').style.marginLeft = `${marginLeft}px`
 
-    if(marginLeft >= 150) {
+    if(marginLeft >= 220) {
       document.querySelector('.header__nav').style.width = `${marginLeft}px`  
     } else {
       document.querySelector('.header__nav').style.display = `none`  
