@@ -17,7 +17,9 @@ const SectionMeetBaxio = () => {
                 O Réveillon promete muitas emoções do dia 28 a 31/12 com atrações incríveis, eventos Open Bar e uma vibe única!
               </p>
               <div className="wrapper-ingresse__button">
-                <button className="button">Comprar ingresso</button>
+                <a href="https://reveillonsnobrasil.com.br/reveillon-dos-quereres/">
+                  <button className="button">Comprar ingresso</button>
+                </a>
                 <img src={logoIngresse} className='logo-ingresse' alt="logo da ingresse" />
               </div>
             </div>
@@ -26,7 +28,9 @@ const SectionMeetBaxio = () => {
               <span className="wrapper-video__title">Conheca Baixo</span> <br />
               <div className='column'>
                 <img src={play} alt="" />
-                <button className="button">Saiba mais</button>
+                <a href="http://www.baixioturismo.com.br/">
+                  <button className="button">Saiba mais</button>
+                </a>
               </div>
             </div>
 

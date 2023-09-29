@@ -40,6 +40,7 @@ const SectionPosts = () => {
             }
           })}
         </div>
+        <a rel="noopener noreferrer" href="https://www.instagram.com/reveillondosquereres/?hl=en" target="_blank" className="instagram-quereres"></a>
       </Container>
       <img src={grafismo} className="post__background-image" srcset="" />
     </section>

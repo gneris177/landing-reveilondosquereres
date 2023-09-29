@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Container from "../Container";
-import ImagemModal from "../ModalImagem";
 import image0 from "../../assets/images/hospedagem/0.jpg";
 import image1 from "../../assets/images/hospedagem/1.jpg";
 import image2 from "../../assets/images/hospedagem/2.jpg";
@@ -29,79 +28,138 @@ import arrowRight from "../../assets/images/SETA_direita.png";
 import "./style.css";
 
 const images = [
-    { img: image0, alt: "" },
-    { img: image1, alt: "" },
-    { img: image2, alt: "" },
-    { img: image3, alt: "" },
-    { img: image4, alt: "" },
-    { img: image5, alt: "" },
-    { img: image6, alt: "" },
-    { img: image7, alt: "" },
-    { img: image8, alt: "" },
-    { img: image9, alt: "" },
-    { img: image10, alt: "" },
-    { img: image11, alt: "" },
-    { img: image12, alt: "" },
-    { img: image13, alt: "" },
-    { img: image14, alt: "" },
-    { img: image15, alt: "" },
-    { img: image16, alt: "" },
-    { img: image17, alt: "" },
-    { img: image18, alt: "" },
-    { img: image19, alt: "" },
-    { img: image20, alt: "" },
-    { img: image21, alt: "" },
-    { img: image22, alt: "" },
+  { img: image0, alt: "" },
+  { img: image1, alt: "" },
+  { img: image2, alt: "" },
+  { img: image3, alt: "" },
+  { img: image4, alt: "" },
+  { img: image5, alt: "" },
+  { img: image6, alt: "" },
+  { img: image7, alt: "" },
+  { img: image8, alt: "" },
+  { img: image9, alt: "" },
+  { img: image10, alt: "" },
+  { img: image11, alt: "" },
+  { img: image12, alt: "" },
+  { img: image13, alt: "" },
+  { img: image14, alt: "" },
+  { img: image15, alt: "" },
+  { img: image16, alt: "" },
+  { img: image17, alt: "" },
+  { img: image18, alt: "" },
+  { img: image19, alt: "" },
+  { img: image20, alt: "" },
+  { img: image21, alt: "" },
+  { img: image22, alt: "" },
 ];
 const imagesPerPage = 5;
 
+import React from "react";
+
+const modal = {
+  position: "fixed",
+  zIndex: 1,
+  left: 0,
+  top: 0,
+  width: "100vw",
+  height: "100vh",
+  overflow: "auto",
+  backgroundColor: "rgba(0, 0, 0, 0.8)",
+};
+
+const close = {
+  position: "absolute",
+  top: 15,
+  right: 35,
+  color: "#f1f1f1",
+  fontSize: 40,
+  fontWeight: "bold",
+  cursor: "pointer",
+};
+
+const modalContent = {
+  display: "flex",
+  alignItems: "center",
+  width: "85%",
+  height: "100%",
+  margin: "auto",
+  objectFit: 'contain'
+};
+
 const SectionReserve = () => {
-    const [startIndex, setStartIndex] = useState(0);
-    const [modalIsOpen, setModalIsOpen] = useState(false);
-    const [imageUrl, setImageUrl] = useState("");
+  const [startIndex, setStartIndex] = useState(0);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [imageUrl, setImageUrl] = useState("");
+  const [isOpen, setIsopen] = useState(false);
 
-    const nextImages = () => {
-        setStartIndex((prevIndex) => (prevIndex + imagesPerPage >= images.length ? 0 : prevIndex + imagesPerPage));
-    };
+  const nextImages = () => {
+    setStartIndex((prevIndex) => (prevIndex + imagesPerPage >= images.length ? 0 : prevIndex + imagesPerPage));
+  };
 
-    const prevImages = () => {
-        setStartIndex((prevIndex) => (prevIndex - imagesPerPage < 0 ? images.length - imagesPerPage : prevIndex - imagesPerPage));
-    };
+  const prevImages = () => {
+    setStartIndex((prevIndex) => (prevIndex - imagesPerPage < 0 ? images.length - imagesPerPage : prevIndex - imagesPerPage));
+  };
 
-    const openModal = (url) => {
-        setImageUrl(url);
-        setModalIsOpen(true);
-    };
+  const openModal = (url) => {
+    setImageUrl(url);
+    setModalIsOpen(true);
+  };
 
-    const closeModal = () => {
-        setModalIsOpen(false);
-        setImageUrl("");
-    };
+  const closeModal = () => {
+    setModalIsOpen(false);
+    setImageUrl("");
+  };
 
+  const Modal = ({ onOpen, children }) => {
+    return <div onClick={onOpen}> {children}</div>;
+  };
+
+  const ModalContent = ({ onClose, children }) => {
     return (
-        <section className="reserve">
-            <Container>
-                <div className="reserve__content">
-                    {images.slice(startIndex, startIndex + imagesPerPage).map((item, i) => (
-                        <img onClick={() => openModal(item.img)} key={`img-${i}`} src={item.img} alt={item.alt} />
-                    ))}
-                </div>
-                <div className="carousel__buttons">
-                    <button onClick={prevImages}>
-                        <img src={arrowLeft} alt="" />
-                    </button>
-                    <button onClick={nextImages}>
-                        <img src={arrowRight} alt="" />
-                    </button>
-                </div>
-                <a href="https://www.baixioreveillondosquereres.com.br/">
-                  <button className="reserve__button">Faça sua reserva</button>
-                </a>
-            </Container>
-
-            <ImagemModal isOpen={modalIsOpen} onClose={closeModal} imageUrl={imageUrl} />
-        </section>
+      <div style={modal}>
+        <span style={close} onClick={onClose}>
+          &times;
+        </span>
+        <img style={modalContent} src={imageUrl} alt="" />
+      </div>
     );
+  };
+
+  return (
+    <section className="reserve">
+      <Container>
+        <div className="reserve__content">
+          {images.slice(startIndex, startIndex + imagesPerPage).map((item, i) => (
+            <img 
+            style={{ cursor: 'pointer' }}
+              key={`img-${i}`} 
+              src={item.img} alt={item.alt} 
+              onClick={() => {
+                setIsopen(true);
+                setImageUrl(item.img)
+              }}  
+            /> 
+          ))}
+        </div>
+        <div className="carousel__buttons">
+          <button onClick={prevImages}>
+            <img src={arrowLeft} alt="" />
+          </button>
+          <button onClick={nextImages}>
+            <img src={arrowRight} alt="" />
+          </button>
+        </div>
+        <a href="https://www.baixioreveillondosquereres.com.br/">
+          <button className="reserve__button">Faça sua reserva</button>
+        </a>
+      </Container>
+      {isOpen && (
+        <ModalContent onClose={() => setIsopen(false)}>
+          <img src={image1} alt="" />
+        </ModalContent>
+      )}
+    </section>
+  );
 };
 
 export default SectionReserve;

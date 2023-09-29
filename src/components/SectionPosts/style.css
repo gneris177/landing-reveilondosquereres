@@ -24,8 +24,19 @@
 .posts__content .arrow-left {
   position: absolute;
   left: -40px;
+  bottom: 80px;
   height: 56px;
   width: auto;
+}
+
+@media (max-width: 768px) {
+  .posts__content .arrow-right {
+   display: none;
+  }
+  
+  .posts__content .arrow-left {
+   display: none;
+  }
 }
 
 .posts__content .last-item,  .posts__content .first-item{
@@ -57,13 +68,13 @@
 
 .instagram {
   position: absolute;
-  width: 200px;
-  height: 200px;
-  border: 1px solid #000;
+  width: 150px;
+  height: 150px;
+  border: 2px solid #000;
   border-radius: 50%;
   z-index: 10;
-  left: 24%;
-  top: 48px;
+  left: 16%;
+  top: -48px;
   cursor: pointer;
 }
 
@@ -75,6 +86,34 @@
   transform: translate(-50%, 50%);
   text-transform: uppercase;
   font-family: "montserrate-bold";
+  font-size: 12px;
   letter-spacing: 4px;
   color: #000;
+}
+
+.instagram-quereres {
+  position: absolute;
+  width: 200px;
+  height: 40px;
+  border: 2px solid #000;
+  border-radius: 16px;
+  z-index: 10;
+  right: 48px;
+  top: -48px;
+  cursor: pointer;
+}
+
+.instagram-quereres::after {
+  content: "@quereres";
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+  font-family: "montserrate-bold";
+  letter-spacing: 4px;
+  color: #000;
+}
+
+.posts .container {
+  position: relative;
 }

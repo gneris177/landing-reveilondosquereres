@@ -39,6 +39,10 @@
   height: 100%;
 }
 
+.meet-baxio__content .wrapper-ingresse .wrapper-ingresse__button a, button {
+  cursor: pointer;
+}
+
 .meet-baxio__content
   .wrapper-ingresse
   .wrapper-ingresse__button
@@ -46,6 +50,8 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: 200px;
+  margin: 16px auto;
 }
 
 .meet-baxio__content .wrapper-video {
@@ -87,6 +93,7 @@
   position: absolute;
   bottom: -24%;
   right: 0;
+  z-index: -1;
 }
 @media (max-width: 992px) {
   .img-grafismo {

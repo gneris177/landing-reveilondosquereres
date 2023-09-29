@@ -9,6 +9,7 @@ const Container = ({ children }) => {
     
     document.querySelector('.header__intro').style.width = `calc(100% - ${marginLeft}px)`
     document.querySelector('.attraction__content__list').style.marginLeft = `${marginLeft}px`
+    document.querySelector('.attraction__line-vertical').style.marginLeft = `${marginLeft/2}px`
 
     if(marginLeft >= 220) {
       document.querySelector('.header__nav').style.width = `${marginLeft}px`  
