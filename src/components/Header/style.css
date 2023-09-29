@@ -69,6 +69,14 @@
   font-weight: 500;
 }
 
+.header__nav ul li#current {
+  color: #c5aa80;
+}
+
+.header__nav ul li:hover {
+  color: #c5aa80;
+}
+
 .header__nav .wrapper-arrow {
   padding: 24px 0;
   text-align: center;

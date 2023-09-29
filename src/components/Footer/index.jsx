@@ -27,10 +27,10 @@ const Footer = () => {
                 <span className='cnpj'>CNPJ:</span> 20.320.184/0001-84
               </div>
               <div className='info__text'>
-                <a href="http://">
+                <a rel="noopener noreferrer" href="https://www.instagram.com/reveillondosquereres/?hl=en" target="_blank">
                   <img width="22" height="22" src="https://img.icons8.com/ios-filled/50/instagram-new--v1.png" alt="instagram-new--v1"/>
                 </a>
-                <a href="http://">
+                <a  rel="noopener noreferrer" href="https://api.whatsapp.com/send?phone=5571999665493&text=Ol%C3%A1!%20Eu%20queria%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20Baixio%20Turismo" target="_blank">
                   <img width="22" height="22" src="https://img.icons8.com/ios-glyphs/30/whatsapp.png" alt="whatsapp"/>
                 </a>
               </div>

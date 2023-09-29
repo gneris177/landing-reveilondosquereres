@@ -36,7 +36,7 @@ const Header = () => {
             <li>Line Up</li>
             <li>Baxio</li>
             <li>Mapa</li>
-            <li>Cowntdown</li>
+            <li id='current'>Cowntdown</li>
             <li>Programação</li>
             <li>Instagram</li>
             <li>Contato</li>

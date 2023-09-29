@@ -3,6 +3,10 @@
   text-align: center;
 }
 
+.reserve a, button {
+  cursor: pointer;
+}
+
 .reserve__content {
   display: flex;
   justify-content: space-evenly;
