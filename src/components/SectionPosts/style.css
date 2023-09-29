@@ -40,10 +40,19 @@
   border: 1px solid #000;
   border-radius: 50%;
   z-index: 10;
-  left: 20%;
-  top: 36px;
+  left: 24%;
+  top: 48px;
+  cursor: pointer;
 }
 
 .instagram::after {
   content: "instagram";
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+  text-transform: uppercase;
+  font-family: "montserrate-bold";
+  letter-spacing: 4px;
+  color: #000;
 }

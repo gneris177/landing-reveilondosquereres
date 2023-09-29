@@ -2,6 +2,7 @@ import Container from '../Container';
 import './style.css';
 import logo from '../../assets/images/1.png';
 import arrowLeft from '../../assets/images/SETA_esquerda.png';
+import baixiooBahia from '../../assets/images/BAIXIO-BAHIA.png';
 
 const ButtonMenu = () => (
   <div class="menu-btn">
@@ -14,16 +15,12 @@ const ButtonMenu = () => (
 const Header = () => {
   return (
     <>
-      {/* <Container>
-        <ButtonMenu />
-      </Container> */}
       <header className="header">
         <div className="header__intro">
-          <div className="header__text-destination">
-            <span>Baixio</span>
-            <div className="line"></div>
-            <span>Bahia</span>
-          </div>
+            <div className="header__text-destination">
+              <img src={baixiooBahia} alt="imagem ilustratva representando Baixio - Bahia" />
+              <ButtonMenu />
+            </div>
 
           <img className="header__img-main" src={logo} alt="" />
         </div>
