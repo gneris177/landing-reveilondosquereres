@@ -1,31 +1,36 @@
-import Container from '../Container';
-import './style.css';
+import { useState } from 'react'
 import logo from '../../assets/images/1.png';
 import arrowLeft from '../../assets/images/SETA_esquerda.png';
 import baixiooBahia from '../../assets/images/BAIXIO-BAHIA.png';
+import './style.css';
 
-const ButtonMenu = () => (
-  <div class="menu-btn">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
-);
 
 const Header = () => {
+  const [customClass, setCustomClass] = useState('');
+
+  const ButtonMenu = ({id}) => (
+    <div class={`menu-btn`} id={id}>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  );
+
   return (
     <>
       <header className="header">
         <div className="header__intro">
             <div className="header__text-destination">
               <img src={baixiooBahia} alt="imagem ilustratva representando Baixio - Bahia" />
-              <ButtonMenu />
+              <div onClick={() => setCustomClass('open-mobi')}>
+                <ButtonMenu id="open-menu" />
+              </div>
             </div>
 
           <img className="header__img-main" src={logo} alt="" />
         </div>
 
-        <nav className="header__nav">
+        <nav class={`header__nav ${customClass}`}>
           <ButtonMenu />
           <ul>
             <li>Line Up</li>

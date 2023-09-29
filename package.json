@@ -13,6 +13,7 @@
     "react": "^18.2.0",
     "react-countdown-circle-timer": "^3.2.1",
     "react-dom": "^18.2.0",
+    "react-modal": "^3.16.1",
     "react-modal-image": "^2.6.0",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1"

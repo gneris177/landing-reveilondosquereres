@@ -12,8 +12,10 @@ const Container = ({ children }) => {
 
     if(marginLeft >= 220) {
       document.querySelector('.header__nav').style.width = `${marginLeft}px`  
+      document.querySelector('#open-menu').style.display = 'none'
     } else {
-      document.querySelector('.header__nav').style.display = `none`  
+      document.querySelector('.header__nav').style.display = `none`;
+      document.querySelector('#open-menu').style.display = 'block'
     }
   }
 

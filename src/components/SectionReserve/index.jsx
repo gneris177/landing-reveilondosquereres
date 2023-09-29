@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Container from '../Container';
+import ImagemModal from '../ModalImagem';
 import image0 from '../../assets/images/hospedagem/0.jpg'
 import image1 from '../../assets/images/hospedagem/1.jpg'
 import image2 from '../../assets/images/hospedagem/2.jpg'
@@ -52,10 +53,12 @@ const images = [
   { img: image21, alt: '' },
   { img: image22, alt: '' }
 ]
-const imagesPerPage = 5; // Número de imagens a serem exibidas de cada vez
+const imagesPerPage = 5; 
 
 const SectionReserve = () => {
   const [startIndex, setStartIndex] = useState(0);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [imageUrl, setImageUrl] = useState('');
 
   const nextImages = () => {
     setStartIndex((prevIndex) =>
@@ -73,12 +76,22 @@ const SectionReserve = () => {
     );
   };
 
+  const openModal = (url) => {
+    setImageUrl(url);
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+    setImageUrl('');
+  };
+
   return (
     <section className="reserve">
       <Container>
         <div className="reserve__content">
           {images.slice(startIndex, startIndex + imagesPerPage).map((item, i) => (
-            <img key={`img-${i}`} src={item.img} alt={item.alt} />
+            <img onClick={() => openModal(item.img)} key={`img-${i}`} src={item.img} alt={item.alt} />
           ))}
         </div>
         <div className="carousel__buttons">
@@ -91,6 +104,8 @@ const SectionReserve = () => {
         </div>
         <button className='reserve__button'>Faça sua reserva</button>
       </Container>
+
+      <ImagemModal isOpen={modalIsOpen} onClose={closeModal} imageUrl={imageUrl} />
     </section>
   );
 };

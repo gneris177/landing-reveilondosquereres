@@ -2,7 +2,7 @@
  display: flex;
  justify-content: right;
  position: relative;
- padding-top: 32px;
+ padding-top: 8px;
 }
 
 .header__intro {
@@ -14,12 +14,12 @@
 
 .header__text-destination {
   display: flex;
-  gap: 24px;
   padding: 8px 40px;
   margin-bottom: -32px;
-  justify-content: space-between;
-  align-items: center;
-  
+  justify-content: a;
+  align-items: end;
+  flex-direction: column-reverse;
+  gap: 16px;
 }
 
 .header__text-destination img {
@@ -42,6 +42,16 @@
   justify-content: space-between;
   align-items: center;
   background: #e8ddd1;
+  padding: 16px 0 0;
+}
+
+.header__nav.open-mobi {
+  position: absolute;
+  display: flex !important;
+  top: 0;
+  width: 60%;
+  max-width: 300px;
+  z-index: 10;
 }
 
 .header__nav ul {
@@ -51,7 +61,7 @@
 }
 
 .header__nav ul li {
-  padding: 18px 0;
+  padding: 16px 0;
   font-size: 15px;
   font-family: "montserrate-medium";
   text-transform: uppercase;
