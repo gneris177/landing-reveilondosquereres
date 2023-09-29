@@ -5,7 +5,12 @@ const minuteSeconds = 60;
 const hourSeconds = 3600;
 const daySeconds = 86400;
 const lastDay = new Date(new Date().getFullYear(), 11, 28, 23, 59, 59, 999); 
-const timerProps = { isPlaying: true, strokeWidth: 7 };
+const timerProps = { 
+  isPlaying: true, 
+  strokeWidth: 8, 
+  trailColor: "#000",
+  trailStrokeWidth: 1
+};
 
 const renderTime = (dimension, time) => {
   return (

@@ -1,17 +1,53 @@
-import Container from '../Container'
-import './style.css'
+import { useEffect } from 'react'
 
-const SectionMaps = () => {
-  return (
-    <section className="maps">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3221.365031324098!2d-122.08421738536833!3d37.422477426235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbc9d4a93e697%3A0x1890b626cbaa9ef5!2sGoogleplex!5e0!3m2!1sen!2sus!4v1632850199341!5m2!1sen!2sus"
-        style={{ border: 0 }}
-        allowfullscreen=""
-        loading="lazy"
-      ></iframe>
-    </section>
-  )
+const Map = () => {
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyD7jRnutIcC4ldEZBE5XgTe8b5klOqhm4o&callback=initMap`
+    script.defer = true
+    document.head.appendChild(script)
+    script.onload = initMap
+  }, [])
+
+  const initMap = () => {
+    const map = new window.google.maps.Map(document.getElementById('map'), {
+      zoom: 12,
+      center: { lat: -12.4892382, lng: -38.2674597 }
+    })
+
+    const startPoint = new window.google.maps.Marker({
+      position: { lat: -12.8752382, lng: -38.8314597 },
+      map,
+      title: 'Ponto de Partida',
+    })
+
+    const endPoint = new window.google.maps.Marker({
+      position: { lat: -12.1037329, lng: -37.7030025 },
+      map,
+      title: 'Ponto de Destino',
+    })
+
+    const directionsService = new window.google.maps.DirectionsService()
+    const directionsRenderer = new window.google.maps.DirectionsRenderer({
+      map,
+      suppressMarkers: true,
+      polylineOptions: { strokeColor: '#c5aa80', strokeWeight: 7 },
+    })
+
+    const request = {
+      origin: startPoint.getPosition(),
+      destination: endPoint.getPosition(),
+      travelMode: 'DRIVING',
+    }
+
+    directionsService.route(request, (result, status) => {
+      if (status === 'OK') {
+        directionsRenderer.setDirections(result)
+      }
+    })
+  }
+
+  return <div id="map" style={{ width: '100%', height: '260px' }}></div>
 }
 
-export default SectionMaps
+export default Map
