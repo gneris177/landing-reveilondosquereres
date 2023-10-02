@@ -12,7 +12,7 @@ const Map = () => {
   const initMap = () => {
     const map = new window.google.maps.Map(document.getElementById('map'), {
       zoom: 12,
-      center: { lat: -12.4892382, lng: -38.2674597 }
+      center: { lat: -12.4892382, lng: -38.2674597 },
     })
 
     const startPoint = new window.google.maps.Marker({

@@ -15,8 +15,8 @@ const SectionAttractions = () => {
   const [currentAttraction, setCurrentAttraction] = useState(1)
 
   return (
-    <section id="attraction" className="attraction">
-      <img src={grafismoFolha} className='attraction__grafismo-folha'/>
+    <section id="attractions" className="attraction">
+      <img src={grafismoFolha} className="attraction__grafismo-folha" />
       <div className="attraction__line-vertical"></div>
 
       <Container>

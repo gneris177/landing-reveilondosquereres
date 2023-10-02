@@ -10,7 +10,7 @@
 .reserve__content {
   display: flex;
   justify-content: space-evenly;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   padding: 16px 0;
   gap: 8px;
   overflow: auto;

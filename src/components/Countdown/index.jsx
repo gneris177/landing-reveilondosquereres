@@ -14,7 +14,7 @@ const timerProps = {
 
 const renderTime = (dimension, time) => {
   return (
-    <div className="time-wrapper">
+    <div id="cowntdown" className="time-wrapper">
       <div className="time">{time}</div>
       <div className="dimension">{dimension}</div>
     </div>
