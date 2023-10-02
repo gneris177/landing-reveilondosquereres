@@ -8,10 +8,13 @@
 .posts__content {
   display: grid;
   align-items: center;
-  justify-content: center;
-  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  overflow-x: auto;
   max-width: 100%;
   position: relative;
+}
+.posts__content::-webkit-scrollbar {
+  visibility: hidden;
 }
 
 .posts__content .arrow-right {
@@ -112,6 +115,18 @@
   font-family: "montserrate-bold";
   letter-spacing: 4px;
   color: #000;
+}
+@media (max-width: 992px) {
+  .instagram-quereres::before {
+    content: "@quereres";
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+    font-family: "montserrate-bold";
+    letter-spacing: 4px;
+    color: #000;
+  }
 }
 
 .posts .container {

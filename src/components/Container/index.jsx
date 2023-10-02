@@ -9,17 +9,23 @@ const Container = ({ children }) => {
     
     document.querySelector('.header__intro').style.width = `calc(100% - ${marginLeft}px)`
     document.querySelector('.attraction__content__list').style.marginLeft = `${marginLeft}px`
-    document.querySelector('#open-menu').style.display = 'none'
+
+    console.log(marginLeft)
 
     if(marginLeft >= 220) {
+      document.querySelector('.header__nav').style.display = `flex`  
+
       if(marginLeft > 350) {
         document.querySelector('.header__nav').style.marginRight = `${marginLeft-350}px`  
         document.querySelector('.header__nav').style.width = `350px`  
       } else {
         document.querySelector('.header__nav').style.width = `${marginLeft}px`  
       }
+
+      document.querySelector('#open-menu').style.display = 'none'
     } else {
       document.querySelector('.header__nav').style.display = `none`  
+      document.querySelector('#open-menu').style.display = 'flex'
     }
   }
 

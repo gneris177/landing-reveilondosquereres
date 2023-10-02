@@ -15,8 +15,8 @@
 }
 @media (max-width: 768px) {
   .attraction__content {
-    grid-template-columns: 1fr;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -28,6 +28,18 @@
   flex-direction: column;
   justify-content: center;
   list-style: none;
+}
+@media (max-width: 768px) {
+  .attraction__content__list {
+    flex-direction: row;
+    overflow-x: auto;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .attraction__content__list::-webkit-scrollbar {
+    visibility: hidden;
+  }
 }
 
 .attraction__content__list li {
@@ -64,6 +76,18 @@
   font-size: 0.9rem;
 }
 
+@media (max-width: 768px) {
+  .attraction__content__list .day {
+    font-size: 1.8rem;
+  }
+  .attraction__content__list .data {
+    font-size: 2rem;
+  }
+  .attraction__content__list .year {
+    font-size: 1rem;
+  }
+}
+
 .attraction__content__list #current .day {
   font-size: 3.6rem;
   color: #000;
@@ -82,10 +106,10 @@
 
 @media (max-width: 768px) {
   .attraction__content__list #current .day {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .attraction__content__list #current .data {
-    font-size: 3.4rem;
+    font-size: 3rem;
   }
 }
 

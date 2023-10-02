@@ -3,6 +3,7 @@ import logo from '../../assets/images/1.png'
 import arrowLeft from '../../assets/images/SETA_esquerda.png'
 import baixiooBahia from '../../assets/images/BAIXIO-BAHIA.png'
 import './style.css'
+import Container from '../Container';
 
 const Header = () => {
   const [customClass, setCustomClass] = useState('')
@@ -24,6 +25,7 @@ const Header = () => {
     <>
       <header className="header">
         <div className="header__intro">
+          <Container>
           <div className="header__text-destination">
             <img
               src={baixiooBahia}
@@ -33,12 +35,14 @@ const Header = () => {
               <ButtonMenu id="open-menu" />
             </div>
           </div>
+          </Container>
+   
 
           <img className="header__img-main" src={logo} alt="" />
         </div>
 
         <nav className={`header__nav ${customClass}`}>
-          <ButtonMenu />
+          <ButtonMenu id="close-menu" />
           <ul>
             <li onClick={() => toSection('line-up')}>Line Up</li>
             <li onClick={() => toSection('baixio')}>Baixio</li>

@@ -16,6 +16,19 @@
 	bottom: 0;
 	right: 0;
 }
+@media (min-width: 2000px) {
+  .footer__content-main .grafismo-coqueiro {
+    object-fit: contain;
+    object-position: right;
+  }
+}
+@media (min-width: 1600px) {
+  .footer__content-main .grafismo-coqueiro {
+    width: 25%;
+    object-fit: contain;
+    max-height: 400px;
+  }
+}
 
 .footer__content-main .grafismo-espiral {
 	bottom: 0;
@@ -27,14 +40,29 @@
 	bottom: 0;
 	left: 0;
 }
+@media (min-width: 2000px) {
+  .footer__content-main .grafismo-espiral {
+    object-fit: contain;
+  }
+}
+@media (min-width: 1600px) {
+  .footer__content-main .grafismo-espiral {
+    width: 25%;
+    object-fit: contain;
+    max-height: 300px;
+		object-position: left;
+  }
+}
 
 .footer__content-main .info {
-	display: flex;
+	display: grid;
+	grid-template-columns: 4fr 4fr 4fr;
 	flex-wrap: wrap;
-	gap: 56px;
+	padding: 16px;
 }
 @media (max-width: 992px) {
 	.footer__content-main .info {
+		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
@@ -42,7 +70,15 @@
 	}
 	.footer__content-main .info :nth-child(1){
 		text-align: center;
+		padding-left: 0;
 	}
+	.footer__content-main .info div:nth-child(1) {
+		padding-left: 0 !important;
+	}
+}
+
+.footer__content-main .info div:nth-child(1) {
+	padding-left: 112px;
 }
 
 .footer__content-main .info__text {
@@ -59,6 +95,11 @@
 	font-family: "montserrate-bold";
 	font-size: 20px;
 }
+
+.footer__content-main .info .wrapper-logo-quereres {
+	margin: auto;
+}
+
 
 .footer__content-main .info .wrapper-logo-quereres img, 
 .footer__content-main .info__logo {
