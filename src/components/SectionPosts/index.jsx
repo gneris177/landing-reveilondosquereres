@@ -24,27 +24,21 @@ const SectionPosts = () => {
           target="_blank"
           className="instagram"
         ></a>
-        <div className="posts__content">
-          {images.map((item, i) => {
-            if (i === 0) {
-              return (
-                <div key={i} className="first-item">
-                  <img className="arrow-left" src={arrowLeft} alt="" />
-                  <img key={`img-${i}`} src={item.img} alt={item.alt} />
-                </div>
-              )
-            } else if (i === 3) {
-              return (
-                <div key={i} className="last-item">
-                  <img key={`img-${i}`} src={item.img} alt={item.alt} />
-                  <img className="arrow-right" src={arrowRight} alt="" />
-                </div>
-              )
-            } else {
-              return <img key={`img-${i}`} src={item.img} alt={item.alt} />
-            }
-          })}
+
+        <div className="wrapper-arrow-right">
+          <img className="arrow-right" src={arrowRight} alt="" />
         </div>
+
+        <div className="wrapper-arrow-left">
+            <img className="arrow-left" src={arrowLeft} alt="" />
+        </div>
+
+        <div className="posts__content">
+          {images.map((item, i) => (
+            <img key={`img-${i}`} src={item.img} alt={item.alt} />
+          ))}
+        </div>
+
         <a
           rel="noopener noreferrer"
           href="https://www.instagram.com/reveillondosquereres/?hl=en"

@@ -10,11 +10,10 @@ const Container = ({ children }) => {
     document.querySelector('.header__intro').style.width = `calc(100% - ${marginLeft}px)`
     document.querySelector('.attraction__content__list').style.marginLeft = `${marginLeft}px`
 
-    console.log(marginLeft)
-
     if(marginLeft >= 220) {
       document.querySelector('.header__nav').style.display = `flex`  
 
+      document.querySelector('.attraction__line-vertical').style.marginLeft = `${marginLeft/2}px`
 
       if(marginLeft > 350) {
         document.querySelector('.header__nav').style.marginRight = `${marginLeft-350}px`  

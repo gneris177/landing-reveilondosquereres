@@ -53,6 +53,10 @@
   transform: translateY(-1000px);
 }
 
+.header__nav.close #close-menu-mobi{
+  display: none;
+}
+
 .header__nav {
   display: flex;
   flex-direction: column;

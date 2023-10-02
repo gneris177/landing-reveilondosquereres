@@ -38,8 +38,6 @@ const Header = () => {
           <img className="header__img-main" src={logo} alt="" />
         </div>
 
-        
-
         <nav className={`header__nav ${customClass}`}>
           <div onClick={() => setCustomClass('close')}>
             <ButtonMenu id="close-menu" />
