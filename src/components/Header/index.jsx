@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import logo from '../../assets/images/1.png'
+import logo from '../../assets/images/1-min.webp'
 import arrowLeft from '../../assets/images/SETA_esquerda.png'
 import baixiooBahia from '../../assets/images/BAIXIO-BAHIA.png'
 import './style.css'
-import Container from '../Container';
+import Container from '../Container'
 
 const Header = () => {
   const [customClass, setCustomClass] = useState('')
@@ -25,24 +25,25 @@ const Header = () => {
     <>
       <header className="header">
         <div className="header__intro">
-          <Container>
           <div className="header__text-destination">
             <img
               src={baixiooBahia}
               alt="imagem ilustratva representando Baixio - Bahia"
             />
+            
             <div onClick={() => setCustomClass('open-mobi')}>
               <ButtonMenu id="open-menu" />
             </div>
           </div>
-          </Container>
-   
-
           <img className="header__img-main" src={logo} alt="" />
         </div>
 
+        
+
         <nav className={`header__nav ${customClass}`}>
-          <ButtonMenu id="close-menu" />
+          <div onClick={() => setCustomClass('close')}>
+            <ButtonMenu id="close-menu" />
+          </div>
           <ul>
             <li onClick={() => toSection('line-up')}>Line Up</li>
             <li onClick={() => toSection('baixio')}>Baixio</li>

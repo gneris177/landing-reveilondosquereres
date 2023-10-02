@@ -36,7 +36,11 @@ const SectionMeetBaxio = () => {
             <div className="wrapper-video">
               <span className="wrapper-video__title">Conheca Baixo</span> <br />
               <div className="column">
-                <img src={play} alt="" />
+                {/* <img src={play} alt="" /> */}
+                <video 
+                  src="https://res.cloudinary.com/dm9xltw2g/video/upload/f_auto:video,q_auto/v1/landing-quereres/fcvpwbj5wqjukua4qx5w"
+                  controls  
+                ></video>
                 <a href="http://www.baixioturismo.com.br/">
                   <button className="button">Saiba mais</button>
                 </a>

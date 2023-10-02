@@ -15,7 +15,7 @@ const SectionAttractions = () => {
   const [currentAttraction, setCurrentAttraction] = useState(1)
 
   return (
-    <section id="attractions" className="attraction">
+    <section className="attraction">
       <img src={grafismoFolha} className="attraction__grafismo-folha" />
       <div className="attraction__line-vertical"></div>
 
@@ -25,7 +25,7 @@ const SectionAttractions = () => {
         </div>
       </Container>
 
-      <div className="attraction__content">
+      <div id="attractions" className="attraction__content">
         <ul className="attraction__content__list">
           {listAttractions.map((a, i) => (
             <li
@@ -35,7 +35,7 @@ const SectionAttractions = () => {
             >
               <div className="day">{a.day}</div>
               <div className="data">
-                {a.data}. <span className="year">{a.year}</span>
+                <div>{a.data}.</div> <div className="year">{a.year}</div>
               </div>
             </li>
           ))}

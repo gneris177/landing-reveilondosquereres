@@ -78,7 +78,7 @@
 }
 
 .footer__content-main .info div:nth-child(1) {
-	padding-left: 112px;
+	/* padding-left: 112px; */
 }
 
 .footer__content-main .info__text {
@@ -97,19 +97,20 @@
 }
 
 .footer__content-main .info .wrapper-logo-quereres {
-	margin: auto;
+	margin: 40px auto 0;
 }
 
 
 .footer__content-main .info .wrapper-logo-quereres img, 
 .footer__content-main .info__logo {
 	width: 130px;
+	margin-bottom: 24px;
 }
 
 .footer__footer {
 	margin: 0;
 	background: #191919;
-	padding: 16px 0;
+	padding: 16px 20px;
 }
 
 .footer__footer__content {
@@ -132,6 +133,7 @@
 	color: #c5aa80;
 	margin: 0;
 	font-family: "montserrate-medium";
+	text-align: center;
 }
 
 .footer__footer__content .logo-pira {

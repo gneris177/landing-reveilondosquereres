@@ -28,6 +28,7 @@
   flex-direction: column;
   justify-content: center;
   list-style: none;
+  padding-left: 20px;
 }
 @media (max-width: 768px) {
   .attraction__content__list {
@@ -35,6 +36,7 @@
     overflow-x: auto;
     align-items: center;
     gap: 40px;
+    justify-content: start;
   }
 
   .attraction__content__list::-webkit-scrollbar {
@@ -51,6 +53,7 @@
   .attraction__content__list li { 
     margin-left: auto;
     margin-right: auto;
+    width:fit-content;
   }
 }
 
@@ -81,7 +84,11 @@
     font-size: 1.8rem;
   }
   .attraction__content__list .data {
+    display: flex;
     font-size: 2rem;
+  }
+  .attraction__content__list .data div:nth-child(1) {
+    text-wrap: nowrap;
   }
   .attraction__content__list .year {
     font-size: 1rem;
@@ -130,7 +137,7 @@
 
 .attraction__grafismo-folha {
   position: absolute;
-  width: 13%;
-  top: 80px;
+  width: 10%;
+  top: 89px;
   left: 0;
 }

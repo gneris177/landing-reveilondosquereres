@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Container from '../Container'
 import image0 from '../../assets/images/hospedagem/0-min.webp'
 import image1 from '../../assets/images/hospedagem/1-min.webp'
@@ -87,12 +87,11 @@ const modalContent = {
 
 const SectionReserve = () => {
   const [startIndex, setStartIndex] = useState(0)
-  const [imageUrl, setImageUrl] = useState('')
+  const [imageView, setImageView] = useState({ url: '', index: 0 })
   const [isOpen, setIsopen] = useState(false)
 
   const nextImages = () => {
     setStartIndex((index) => {
-      console.log(index + imagesPerPage >= images.length ? 0 : index + imagesPerPage)
       return index + imagesPerPage >= images.length ? 0 : index + imagesPerPage
     })
   }
@@ -104,6 +103,31 @@ const SectionReserve = () => {
         : prevIndex - imagesPerPage
     })
   }
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (imageView.url === '') return
+
+      const index = images.findIndex((img) => img.img === imageView.url)
+
+      if (event.key === 'ArrowRight') {
+        if (index + 1 < images.length) {
+          setImageView({
+            url: images[index + 1].img,
+            index: index + 1,
+          })
+        }
+      } else if (event.key === 'ArrowLeft') {
+        if (index > 0) setImageView({ url: images[index - 1].img, index: index - 1 })
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [imageView])
 
   return (
     <section className="reserve">
@@ -120,7 +144,7 @@ const SectionReserve = () => {
                 loading="lazy"
                 onClick={() => {
                   setIsopen(true)
-                  setImageUrl(item.img)
+                  setImageView({ url: item.img, index: i })
                 }}
               />
             ))}
@@ -148,8 +172,14 @@ const SectionReserve = () => {
 
       {isOpen && (
         <div style={modal}>
-          <span style={close} onClick={() => setIsopen(false)}>&times;</span>
-          <img style={modalContent} src={imageUrl} alt="Imagem da nossa hospedagem" />
+          <span style={close} onClick={() => setIsopen(false)}>
+            &times;
+          </span>
+          <img
+            style={modalContent}
+            src={imageView.url}
+            alt="Imagem da nossa hospedagem"
+          />
         </div>
       )}
     </section>

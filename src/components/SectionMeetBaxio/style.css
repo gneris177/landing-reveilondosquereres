@@ -7,7 +7,7 @@
 }
 
 .meet-baxio__content .wrapper-ingresse {
-  padding: 48px 0;
+  padding: 48px 8px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,6 +15,7 @@
 }
 @media (max-width: 992px) {
   .meet-baxio__content .wrapper-ingresse {
+    padding: 48px 20px;
     flex-direction: column;
     justify-content: center;
   }
@@ -29,7 +30,7 @@
 @media (max-width: 992px) {
   .meet-baxio__content .wrapper-ingresse .wrapper-ingresse__text {
     max-width: initial;
-    padding: 0 16px;
+    text-align: center;
   }
 }
 
@@ -60,6 +61,7 @@
 }
 
 .meet-baxio__content .wrapper-video__title {
+  padding: 0 8px;
   font-size: 2.2rem;
   font-family: 'ade-display';
   text-transform: uppercase;
@@ -75,12 +77,12 @@
   content: ':';
 }
 
-.meet-baxio__content .wrapper-video img {
+.meet-baxio__content .wrapper-video video {
   min-height: 250px;
   max-width: 60%;
 }
 @media (max-width: 992px) {
-  .meet-baxio__content .wrapper-video img {
+  .meet-baxio__content .wrapper-video video {
     min-width: 100%;
   }
 }

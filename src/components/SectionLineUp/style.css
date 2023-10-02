@@ -1,6 +1,6 @@
 .line-up__content {
-  padding: 58px 0;
-  background-image: url(../../assets/images/2.png);
+  padding: 58px 20px;
+  background-image: url(../../assets/images/2-min.webp);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -15,6 +15,11 @@
   text-transform: uppercase;
   letter-spacing: 8px;
 }
+@media (max-width: 992px) {
+  .line-up__title  {
+    font-size: 2.2rem;
+  }
+}
 
 .line-up__text, .line-up__text.strong {
   font-size: 1.3rem;
@@ -25,6 +30,11 @@
   font-family: "montserrate-medium";
   margin: 0;
 }
+@media (max-width: 992px) {
+  .line-up__text, .line-up__text.strong {
+    font-size: 1.1rem;
+  }
+}
 
 .line-up__text.strong { 
   margin: 6px 0;
@@ -32,9 +42,9 @@
   font-family: "montserrate-bold";
   text-align: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .line-up__text, strong.line-up__text {
-    font-size: 1rem;
+    font-size: 16px;
   }
 }
 

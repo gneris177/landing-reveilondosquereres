@@ -1,20 +1,14 @@
 .header {
  display: flex;
  justify-content: right;
- position: relative;
- padding-top: 8px;
+ overflow: hidden;
 }
 
 .header__intro {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  
-}
-
-.header__intro .container{
-
+  align-items: center;  
 }
 
 .header__text-destination {
@@ -25,6 +19,12 @@
   align-items: end;
   flex-direction: column-reverse;
   gap: 16px;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1200px;
+  width: 100%;
 }
 
 .header__text-destination img {
@@ -36,9 +36,21 @@
 }
 @media (max-width: 992px) {
   .header__img-main {
-    min-height: 50vh;
     object-fit: cover;
+    min-height: 40vh;
   }
+}
+@media (max-width: 765px) {
+  .header__img-main {
+    object-fit: cover;
+    max-height: 50vh;
+    margin-left: -200px;
+    width: auto;
+  }
+}
+
+.header__nav.close {
+  transform: translateY(-1000px);
 }
 
 .header__nav {
@@ -48,15 +60,19 @@
   align-items: center;
   background: #e8ddd1;
   padding: 16px 0 0;
+  z-index: 99;
+
 }
 
 .header__nav.open-mobi {
+  transition: all 1s ease-in-out;
+  transform: translateY(0);
   position: absolute;
   display: flex !important;
   top: 0;
   width: 60%;
   max-width: 300px;
-  z-index: 10;
+  z-index: 99;
 }
 
 .header__nav ul {
@@ -72,6 +88,12 @@
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 500;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .header__nav ul li {
+    padding: 12px 0;
+  }
 }
 
 .header__nav ul li#current {
@@ -90,7 +112,7 @@
 }
 
 .header__nav .wrapper-arrow img{
-  width: 40%;
+  max-width: 90px;
 }
 
 .wrapper-menu-open {
@@ -112,14 +134,14 @@
   transition: 0.4s;
 }
 
-.menu-btn.active .bar:nth-child(1) {
+.menu-btn#close-menu .bar:nth-child(1) {
   transform: rotate(-45deg) translate(-5px, 6px);
 }
 
-.menu-btn.active .bar:nth-child(2) {
+.menu-btn#close-menu .bar:nth-child(2) {
   opacity: 0;
 }
 
-.menu-btn.active .bar:nth-child(3) {
+.menu-btn#close-menu .bar:nth-child(3) {
   transform: rotate(45deg) translate(-5px, -6px);
 }
