@@ -165,7 +165,7 @@ const SectionReserve = () => {
           </button>
         </div>
 
-        <a href="https://www.baixioreveillondosquereres.com.br/">
+        <a href="https://www.baixioreveillondosquereres.com.br/" target='_blank'>
           <button className="reserve__button">Faça sua reserva</button>
         </a>
       </Container>

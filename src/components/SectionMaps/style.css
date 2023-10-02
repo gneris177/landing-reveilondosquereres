@@ -1,9 +1,14 @@
-.maps {
-  width: 100%;
-  height: 30vh;
+.maps h2 {
+  text-align: center;
 }
 
-.maps iframe {
-  width: 100%;
-  height: 100%;
+h2 img {
+  height: 3rem;
+  width: auto;
+}
+@media (max-width: 768px) {
+  h2 img {
+    height: 2rem;
+    width: auto;
+  }
 }
