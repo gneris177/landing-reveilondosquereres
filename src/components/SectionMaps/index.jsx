@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import iconMap from '../../assets/images/icon-map.png'
 
 const Map = () => {
   useEffect(() => {
@@ -19,12 +20,18 @@ const Map = () => {
       position: { lat: -12.8752382, lng: -38.8314597 },
       map,
       title: 'Ponto de Partida',
+      icon: {
+        url: iconMap, scaledSize: new window.google.maps.Size(30, 40)
+      }
     })
 
     const endPoint = new window.google.maps.Marker({
       position: { lat: -12.1037329, lng: -37.7030025 },
       map,
       title: 'Ponto de Destino',
+      icon: {
+        url: iconMap, scaledSize: new window.google.maps.Size(30, 40)
+      }
     })
 
     const directionsService = new window.google.maps.DirectionsService()
