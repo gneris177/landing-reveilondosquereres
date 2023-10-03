@@ -99,16 +99,19 @@
   cursor: pointer;
 }
 @media (max-width: 992px) {
-  .header__nav ul li {
+  .header__nav ul li,
+  .header__nav--mobi ul li {
     padding: 12px 0;
   }
 }
 
-.header__nav ul li#current {
+.header__nav ul li#current,
+.header__nav--mobi ul li#current {
   color: #c5aa80;
 }
 
-.header__nav ul li:hover {
+.header__nav ul li:hover,
+.header__nav--mobi ul li:hover {
   color: #c5aa80;
 }
 
@@ -151,6 +154,6 @@
 }
 
 .menu-btn#close-menu .bar:nth-child(3),
-.menu-btn#close---mobi .bar:nth-child(3) {
+.menu-btn#close-menu--mobi .bar:nth-child(3) {
   transform: rotate(45deg) translate(-5px, -6px);
 }

@@ -26,11 +26,6 @@
   min-width: 200px;
   max-width: 240px;
 }
-/* @media (max-width: 768px) {
-  .reserve__content img {
-    min-width: 200px;
-  }
-} */
 
 .reserve__button {
   margin-top: 16px;
@@ -57,36 +52,47 @@
   width: 40px;
 }
 
-.image-transition {
-  opacity: 1;
-  transition: opacity 10s ease-in-out; /* Tempo e efeito de transição */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  25% { opacity: 0.4; }
+  75% { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+.reserve__content img {
+  cursor: pointer;
+}
+.reserve__content img:nth-child(1) {
+  animation: fadeIn 0s ease-in; 
+}
+.reserve__content img:nth-child(2) {
+  animation: fadeIn 1s ease-in; 
+}
+.reserve__content img:nth-child(3) {
+  animation: fadeIn 1.5s ease-in; 
+}
+.reserve__content img:nth-child(4) {
+  animation: fadeIn 2s ease-in; 
+}
+.reserve__content img:nth-child(5) {
+  animation: fadeIn 3s ease-in; 
 }
 
-.image-transition:hover {
-  opacity: 0.7; /* Opacidade ao passar o mouse */
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .modal-content {
-  display: 'flex';
-  align-items: 'center';
-  width: '85%';
-  height: '100%';
-  margin: 'auto';
-  object-fit: 'contain';
-}
-
-/* CSS para a animação de início */
-@keyframes fadeIn {
-  0% { 
-    opacity: 0; 
-  }
-  25% { opacity: 0.4; }
-  75% { opacity: 0.8; }
-  100% { 
-    opacity: 1; 
-  }
-}
-
-.reserve__content img {
-  animation: fadeIn 2s ease-in; /* Aplica a animação com duração de 0.5 segundos */
+  display: flex;
+  align-items: center;
+  width: 85%;
+  height: 100%;
+  margin: auto;
+  object-fit: contain;
 }
