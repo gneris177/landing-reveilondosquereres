@@ -19,10 +19,10 @@ const SectionAttractions = () => {
   return (
     <section className="attraction">
       <img src={grafismoFolha} className="attraction__grafismo-folha" />
-      <div className="attraction__line-vertical"></div>
+      {/* <div className="attraction__line-vertical"></div> */}
 
       <Container>
-        <div className="attraction__wrapper-countdown">
+        <div id="cowntdown" className="attraction__wrapper-countdown">
           <h2><img src={titleImageCountDown} /></h2>
           <br />
           <Countdown />

@@ -59,7 +59,7 @@ const Map = () => {
   };
 
   return (
-    <section className="maps">
+    <section id="map-section" className="maps">
       <h2><img src={titleImage} /></h2>
       <div id="map" style={{ width: "100%", height: "260px" }}></div>
     </section>

@@ -144,8 +144,9 @@
 
 .attraction__grafismo-folha {
   position: absolute;
-  width: 10%;
+  width: auto;
   top: 89px;
+  max-height: 150px;
   left: 0;
   z-index: 2;
 }

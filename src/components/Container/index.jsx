@@ -14,7 +14,7 @@ const Container = ({ children }) => {
       document.querySelector('.header__nav').classList.remove('close');
       document.querySelector('#open-menu--mobi').style.display = 'none';
       document.querySelector('#open-menu').style.right = `${marginLeft - 64}px`;
-      document.querySelector('.attraction__line-vertical').style.marginLeft = `${marginLeft/2}px`
+      // document.querySelector('.attraction__line-vertical').style.marginLeft = `${marginLeft/2}px`
 
       if(marginLeft > 350) {
         document.querySelector('.header__nav').style.marginRight = `${marginLeft-350}px`  

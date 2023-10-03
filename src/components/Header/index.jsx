@@ -79,7 +79,7 @@ const Header = () => {
           <ul>
             <li onClick={() => toSection('line-up')}>Line Up</li>
             <li onClick={() => toSection('baixio')}>Baixio</li>
-            <li onClick={() => toSection('map')}>Mapa</li>
+            <li onClick={() => toSection('map-section')}>Mapa</li>
             <li onClick={() => toSection('cowntdown')}>Cowntdown</li>
             {/* <li onClick={() => toSection('attractions')}>Programação</li> */}
             <li onClick={() => toSection('posts')}>Instagram</li>
