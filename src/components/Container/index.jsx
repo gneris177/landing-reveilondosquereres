@@ -8,11 +8,12 @@ const Container = ({ children }) => {
     const marginLeft = parseInt(style.marginLeft, 10)
     
     document.querySelector('.header__intro').style.width = `calc(100% - ${marginLeft}px)`
-    document.querySelector('.attraction__content__list').style.marginLeft = `${marginLeft}px`
+    // document.querySelector('.attraction__content__list').style.marginLeft = `${marginLeft}px`
 
     if(marginLeft >= 220) {
-      document.querySelector('.header__nav').style.display = `flex`  
-
+      document.querySelector('.header__nav').classList.remove('close');
+      document.querySelector('#open-menu--mobi').style.display = 'none';
+      document.querySelector('#open-menu').style.right = `${marginLeft - 64}px`;
       document.querySelector('.attraction__line-vertical').style.marginLeft = `${marginLeft/2}px`
 
       if(marginLeft > 350) {
@@ -21,13 +22,10 @@ const Container = ({ children }) => {
       } else {
         document.querySelector('.header__nav').style.width = `${marginLeft}px`  
       }
-
-      document.querySelector('.header__nav').classList.remove('close');
-      document.querySelector('#open-menu').style.display = 'none'
     } else {
-      document.querySelector('#open-menu').style.display = 'flex'
+      document.querySelector('.header__nav').classList.add('close');
       document.querySelector('.header__nav').style.display = 'none';
-      document.querySelector('.header__nav').classList.add('close')
+      document.querySelector('#open-menu').style.display = 'none';
     }
   }
 

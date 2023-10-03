@@ -29,7 +29,7 @@ const SectionAttractions = () => {
         </div>
       </Container>
 
-      <div className="wrapper__attraction__content" id="attractions" >
+      {/* <div className="wrapper__attraction__content" id="attractions" >
         <Container>
           <h2><img src={titleImageProgramaca} /></h2>
           <br />
@@ -48,7 +48,7 @@ const SectionAttractions = () => {
           </ul>
           <img className="attraction__image" src={attraction1} alt="" />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

@@ -27,34 +27,6 @@ import arrowLeft from '../../assets/images/SETA_esquerda.png'
 import arrowRight from '../../assets/images/SETA_direita.png'
 import './style.css'
 
-const images = [
-  { img: image0, alt: 'Imagem da nossa hospedagem' },
-  { img: image1, alt: 'Imagem da nossa hospedagem' },
-  { img: image2, alt: 'Imagem da nossa hospedagem' },
-  { img: image3, alt: 'Imagem da nossa hospedagem' },
-  { img: image4, alt: 'Imagem da nossa hospedagem' },
-  { img: image5, alt: 'Imagem da nossa hospedagem' },
-  { img: image6, alt: 'Imagem da nossa hospedagem' },
-  { img: image7, alt: 'Imagem da nossa hospedagem' },
-  { img: image8, alt: 'Imagem da nossa hospedagem' },
-  { img: image9, alt: 'Imagem da nossa hospedagem' },
-  { img: image10, alt: 'Imagem da nossa hospedagem' },
-  { img: image11, alt: 'Imagem da nossa hospedagem' },
-  { img: image12, alt: 'Imagem da nossa hospedagem' },
-  { img: image13, alt: 'Imagem da nossa hospedagem' },
-  { img: image14, alt: 'Imagem da nossa hospedagem' },
-  { img: image15, alt: 'Imagem da nossa hospedagem' },
-  { img: image16, alt: 'Imagem da nossa hospedagem' },
-  { img: image17, alt: 'Imagem da nossa hospedagem' },
-  { img: image18, alt: 'Imagem da nossa hospedagem' },
-  { img: image19, alt: 'Imagem da nossa hospedagem' },
-  { img: image20, alt: 'Imagem da nossa hospedagem' },
-  { img: image21, alt: 'Imagem da nossa hospedagem' },
-  { img: image22, alt: 'Imagem da nossa hospedagem' },
-]
-
-const imagesPerPage = 5
-
 const modal = {
   position: 'fixed',
   zIndex: 1,
@@ -76,33 +48,57 @@ const close = {
   cursor: 'pointer',
 }
 
-const modalContent = {
-  display: 'flex',
-  alignItems: 'center',
-  width: '85%',
-  height: '100%',
-  margin: 'auto',
-  objectFit: 'contain',
-}
-
 const SectionReserve = () => {
-  const [startIndex, setStartIndex] = useState(0)
   const [imageView, setImageView] = useState({ url: '', index: 0 })
   const [isOpen, setIsopen] = useState(false)
+  const [galleryIndex, setGalleryIndex] = useState(0)
 
   const nextImages = () => {
-    setStartIndex((index) => {
-      return index + imagesPerPage >= images.length ? 0 : index + imagesPerPage
-    })
+    if (galleryIndex >= 3) return
+    setGalleryIndex(galleryIndex + 1)
   }
 
   const prevImages = () => {
-    setStartIndex((prevIndex) => {
-      return prevIndex - imagesPerPage < 0
-        ? images.length - imagesPerPage
-        : prevIndex - imagesPerPage
-    })
+    if (galleryIndex <= 0) return
+    setGalleryIndex(galleryIndex - 1)
   }
+
+  const Gallery0 = () => (
+    <>
+      <img src={image0} alt="Imagem da nossa hospedagem" />
+      <img src={image1} alt="Imagem da nossa hospedagem" />
+      <img src={image2} alt="Imagem da nossa hospedagem" />
+      <img src={image3} alt="Imagem da nossa hospedagem" />
+      <img src={image4} alt="Imagem da nossa hospedagem" />
+    </>
+  )
+  const Gallery1 = () => (
+    <>
+      <img src={image5} alt="Imagem da nossa hospedagem" />
+      <img src={image6} alt="Imagem da nossa hospedagem" />
+      <img src={image7} alt="Imagem da nossa hospedagem" />
+      <img src={image8} alt="Imagem da nossa hospedagem" />
+      <img src={image9} alt="Imagem da nossa hospedagem" />
+    </>
+  )
+  const Gallery2 = () => (
+    <>
+      <img src={image10} alt="Imagem da nossa hospedagem" />
+      <img src={image11} alt="Imagem da nossa hospedagem" />
+      <img src={image12} alt="Imagem da nossa hospedagem" />
+      <img src={image13} alt="Imagem da nossa hospedagem" />
+      <img src={image14} alt="Imagem da nossa hospedagem" />
+    </>
+  )
+  const Gallery3 = () => (
+    <>
+      <img src={image15} alt="Imagem da nossa hospedagem" />
+      <img src={image16} alt="Imagem da nossa hospedagem" />
+      <img src={image17} alt="Imagem da nossa hospedagem" />
+      <img src={image18} alt="Imagem da nossa hospedagem" />
+      <img src={image21} alt="Imagem da nossa hospedagem" />
+    </>
+  )
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -112,13 +108,12 @@ const SectionReserve = () => {
 
       if (event.key === 'ArrowRight') {
         if (index + 1 < images.length) {
-          setImageView({
-            url: images[index + 1].img,
-            index: index + 1,
-          })
+          setImageView({ url: images[index + 1].img, index: index + 1 })
         }
       } else if (event.key === 'ArrowLeft') {
-        if (index > 0) setImageView({ url: images[index - 1].img, index: index - 1 })
+        if (index > 0) {
+          setImageView({ url: images[index - 1].img, index: index - 1 })
+        }
       }
     }
 
@@ -133,39 +128,37 @@ const SectionReserve = () => {
     <section className="reserve">
       <Container>
         <div className="reserve__content">
-          {images
-            .slice(startIndex, startIndex + imagesPerPage)
-            .map((item, i) => (
-              <img
-                style={{ cursor: 'pointer' }}
-                key={`img-${i}`}
-                src={item.img}
-                alt={item.alt}
-                loading="lazy"
-                onClick={() => {
-                  setIsopen(true)
-                  setImageView({ url: item.img, index: i })
-                }}
-              />
-            ))}
+          {galleryIndex == 0 && <Gallery0 />}
+          {galleryIndex == 1 && <Gallery1 />}
+          {galleryIndex == 2 && <Gallery2 />}
+          {galleryIndex == 3 && <Gallery3 />}
         </div>
 
         <div className="carousel__buttons">
-          <button onClick={prevImages}>
-            <img
-              src={arrowLeft}
-              alt="imagem ilustrativa com uma seta para esquerda"
-            />
-          </button>
+          {galleryIndex > 0 && (
+            <button onClick={prevImages}>
+              <img
+                src={arrowLeft}
+                alt="imagem ilustrativa com uma seta para esquerda"
+              />
+            </button>
+          )}
+
+        {galleryIndex < 3 && (
           <button onClick={nextImages}>
             <img
               src={arrowRight}
               alt="imagem ilustrativa com uma seta para direita"
             />
           </button>
+        )}
         </div>
 
-        <a href="https://www.baixioreveillondosquereres.com.br/" target='_blank'>
+        <a
+          href="https://www.baixioreveillondosquereres.com.br/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <button className="reserve__button">Faça sua reserva</button>
         </a>
       </Container>
@@ -176,7 +169,7 @@ const SectionReserve = () => {
             &times;
           </span>
           <img
-            style={modalContent}
+            className="modal-content"
             src={imageView.url}
             alt="Imagem da nossa hospedagem"
           />

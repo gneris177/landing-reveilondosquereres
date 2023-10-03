@@ -14,6 +14,7 @@
   gap: 8px;
   overflow: auto;
   padding: 8px;
+  overflow: auto;
 }
 
 .reserve__content img {
@@ -54,4 +55,38 @@
 
 .carousel__buttons button img {
   width: 40px;
+}
+
+.image-transition {
+  opacity: 1;
+  transition: opacity 10s ease-in-out; /* Tempo e efeito de transição */
+}
+
+.image-transition:hover {
+  opacity: 0.7; /* Opacidade ao passar o mouse */
+}
+
+.modal-content {
+  display: 'flex';
+  align-items: 'center';
+  width: '85%';
+  height: '100%';
+  margin: 'auto';
+  object-fit: 'contain';
+}
+
+/* CSS para a animação de início */
+@keyframes fadeIn {
+  0% { 
+    opacity: 0; 
+  }
+  25% { opacity: 0.4; }
+  75% { opacity: 0.8; }
+  100% { 
+    opacity: 1; 
+  }
+}
+
+.reserve__content img {
+  animation: fadeIn 2s ease-in; /* Aplica a animação com duração de 0.5 segundos */
 }
