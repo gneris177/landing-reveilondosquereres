@@ -18,6 +18,11 @@ h2 img {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 1225px) {
+  .maps .location-container {
+    padding: 0 20px;
+  }
+}
 
 .maps .location {
   display: flex;

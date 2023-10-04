@@ -67,7 +67,7 @@
   width: 100%;
 }
 
-.posts__content img:nth-child(3) {
+.posts__content img:nth-child(3), .posts__content img:nth-child(4) {
   height: 106%;
   margin-bottom: 24px;
 }
@@ -129,7 +129,7 @@
 @media (max-width: 992px) {
   .instagram-quereres {
     top: initial;
-    right: 48px;
+    right: 7%;
     bottom: 0;
   }
 }
