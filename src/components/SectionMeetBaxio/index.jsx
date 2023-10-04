@@ -1,6 +1,5 @@
 import Container from "../Container";
 import "./style.css";
-import play from "../../assets/images/PLAY1_foto.png";
 import logoIngresse from "../../assets/images/ingresse.png";
 import imageGrafismo from "../../assets/images/GRAFISMO.png";
 import titleImageBaixio from "../../assets/images/conhecabaixio.png";
@@ -13,30 +12,40 @@ const SectionMeetBaxio = () => {
           <div style={{ position: "relative" }}>
             <div className="wrapper-ingresse">
               <p className="wrapper-ingresse__text">
-                Diferente de tudo que você já viveu! Seja bem-vindo ao Réveillon dos Quereres 2024, que estreia em Baixio. Localizado a pouco mais de uma hora de
-                Salvador, próximo à Praia do Forte e à Costa do Sauípe. Com suas águas cristalinas do mar, rio e lagoas, Baixio se torna um verdadeiro refúgio para
-                aqueles que são apaixonados pela natureza. O Réveillon promete muitas emoções do dia 28 a 31/12 com atrações incríveis, eventos Open Bar e uma vibe
-                única!
+                <h2 className="title">Diferente de tudo que você já viveu!</h2>
+                Seja bem-vindo ao <strong>Réveillon dos Quereres 2024</strong>, 
+                que estreia em Baixio. Localizado a pouco mais de uma hora de Salvador, 
+                próximo à Praia do Forte e à Costa do Sauípe. Com suas águas cristalinas do mar, 
+                rio e lagoas, Baixio se torna um verdadeiro refúgio para aqueles que são 
+                apaixonados pela natureza.
+                O Réveillon dos Quereres promete muitas emoções do dia <strong>28 a 31/12 </strong> 
+                com atrações incríveis. <strong>3 festas Open Bar, Réveillon All Inclusive </strong> 
+                e uma vibe única!
               </p>
               <div className="wrapper-ingresse__button">
-                <a href="https://reveillonsnobrasil.com.br/reveillon-dos-quereres/" rel="noopener noreferrer" target="_blank"
+                <a 
+                  href="https://reveillonsnobrasil.com.br/reveillon-dos-quereres/" 
+                  rel="noopener noreferrer" 
+                  target="_blank"
                 >
-                  <button className="button">Comprar ingresso</button>
+                  <button className="button-custom">Comprar ingresso</button>
                 </a>
                 <img src={logoIngresse} className="logo-ingresse" alt="logo da ingresse" />
               </div>
             </div>
 
             <div className="wrapper-video">
-              <h2>
+              <h2 className="title">
                 <img src={titleImageBaixio} />
               </h2>
               <div className="column">
-                {/* <img src={play} alt="" /> */}
                 <video src="https://res.cloudinary.com/dm9xltw2g/video/upload/f_auto:video,q_auto/v1/landing-quereres/fcvpwbj5wqjukua4qx5w" controls></video>
-                <a rel="noopener noreferrer" href="http://www.baixioturismo.com.br/" target="_blank">
-                  <button className="button">Saiba mais</button>
-                </a>
+                <div className="wrapper-link">
+                  <p className="text">Clique e conheça <br /> mais sobre o Baixio.</p>
+                  <a rel="noopener noreferrer" href="http://www.baixioturismo.com.br/" target="_blank">
+                    <button className="button-custom">Baixio Turismo</button>
+                  </a>
+                </div>
               </div>
             </div>
 

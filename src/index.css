@@ -13,21 +13,21 @@ body {
 
 @font-face {
   font-family: "montserrate-medium";
-  src: url("./assets/fonts/montserrat-family-all-versions/Montserrat-Medium.otf");
+  src: url("./assets/fonts/Montserrat-Medium.otf");
 }
 
 @font-face {
   font-family: "montserrate-light";
-  src: url("./assets/fonts/montserrat-family-all-versions/Montserrat-Light.otf");
+  src: url("./assets/fonts/Montserrat-Light.otf");
 }
 
 @font-face {
   font-family: "montserrate-bold";
-  src: url("./assets/fonts/montserrat-family-all-versions/Montserrat-Bold.otf");
+  src: url("./assets/fonts/Montserrat-Bold.otf");
 }
 
 @font-face {
   font-family: "montserrate-thin";
-  src: url("./assets/fonts/montserrat-family-all-versions/Montserrat-Thin.otf");
+  src: url("./assets/fonts/Montserrat-Thin.otf");
 }
 

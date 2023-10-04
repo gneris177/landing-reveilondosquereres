@@ -19,15 +19,16 @@ import image15 from '../../assets/images/hospedagem/15-min.webp';
 import image16 from '../../assets/images/hospedagem/16-min.webp';
 import image17 from '../../assets/images/hospedagem/17-min.webp';
 import image18 from '../../assets/images/hospedagem/18-min.webp';
-import image21 from '../../assets/images/hospedagem/21-min.webp';
+import image19 from '../../assets/images/hospedagem/19-min.webp';
 import arrowLeft from '../../assets/images/SETA_esquerda.png';
 import arrowRight from '../../assets/images/SETA_direita.png';
 import './style.css';
 
 const images = [
-  image0, image1, image2, image3, image4, image5, image6,
-  image7, image8, image9, image10, image11, image12, image13,
-  image14, image15, image16, image17, image18, image21
+  image0, image1, image2, image3, image4, 
+  image5, image6, image7, image8, image9, 
+  image10, image11, image12, image13, image14, 
+  image15, image16, image17, image18, image19
 ];
 
 const SectionReserve = () => {
@@ -37,19 +38,19 @@ const SectionReserve = () => {
 
   const Gallery0 = memo(() => (
     <>
-      <img src={image0} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
-      <img src={image1} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
-      <img src={image2} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
+      <img src={image11} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
+      <img src={image5} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
+      <img src={image13} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
       <img src={image3} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
-      <img src={image4} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
+      <img src={image14} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
     </>
   ));
 
   const Gallery1 = memo(() => (
     <>
-      <img src={image5} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
+      <img src={image0} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
       <img src={image6} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
-      <img src={image7} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
+      <img src={image1} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
       <img src={image8} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
       <img src={image9} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
     </>
@@ -58,10 +59,10 @@ const SectionReserve = () => {
   const Gallery2 = memo(() => (
     <>
       <img src={image10} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
-      <img src={image11} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
+      <img src={image2} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
       <img src={image12} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
-      <img src={image13} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
-      <img src={image14} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
+      <img src={image4} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
+      <img src={image7} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
     </>
   ));
 
@@ -71,7 +72,7 @@ const SectionReserve = () => {
       <img src={image16} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
       <img src={image17} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
       <img src={image18} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
-      <img src={image21} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
+      <img src={image19} alt="Imagem da nossa hospedagem" loading='lazy' onClick={openImage} />
     </>
   ));
 
@@ -101,13 +102,11 @@ const SectionReserve = () => {
 
       if (event.key === 'ArrowRight') {
         const index = images.findIndex(img => imageView.url.indexOf(img) >= 0);
-
         if (index + 1 < images.length) {
           setImageView({ url: images[index + 1], index: index + 1 });
         }
       } else if (event.key === 'ArrowLeft') {
         const index = images.findIndex(img => imageView.url.indexOf(img) >= 0);
-
         if (index > 0) {
           setImageView({ url: images[index - 1], index: index - 1 });
         }

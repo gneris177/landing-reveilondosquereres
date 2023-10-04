@@ -5,11 +5,7 @@ import './style.css'
 
 const Map = () => {
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyD7jRnutIcC4ldEZBE5XgTe8b5klOqhm4o&callback=initMap`;
-    script.defer = true;
-    document.head.appendChild(script);
-    script.onload = initMap;
+    initMap();
   }, []);
 
   const initMap = () => {
