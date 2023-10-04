@@ -12,16 +12,16 @@ const Map = () => {
   const initMap = () => {
     const map = new window.google.maps.Map(document.getElementById('map'), {
       zoom: 12,
-      center: { lat: -12.4892382, lng: -38.2674597 },
+      center: { lat: -12.9118053, lng: -38.3415497 },
     })
 
     const startPoint = new window.google.maps.Marker({
-      position: { lat: -12.8752382, lng: -38.8314597 },
+      position: { lat: -12.9118053, lng: -38.3415497 },
       map,
       title: 'Ponto de Partida',
       icon: {
-        url: iconMap,
-        scaledSize: new window.google.maps.Size(30, 40),
+        url: 'https://img.icons8.com/fluency-systems-filled/48/circled-record.png',
+        scaledSize: new window.google.maps.Size(16, 16),
       },
     })
 

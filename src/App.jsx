@@ -9,6 +9,7 @@ import SectionPosts from './components/SectionPosts'
 import Footer from './components/Footer'
 import './App.css'
 
+
 const App = () => {
   const [isLoading, setIsLoading] = useState(false)
 

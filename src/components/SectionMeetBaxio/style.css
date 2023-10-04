@@ -6,8 +6,7 @@
   display: flex;
 }
 
-
-.meet-baxio  .button-custom {
+.meet-baxio .button-custom {
   background: transparent;
   height: 56px;
   width: 250px;
@@ -68,7 +67,10 @@ button {
   cursor: pointer;
 }
 
-.meet-baxio__content .wrapper-ingresse .wrapper-ingresse__button .logo-ingresse {
+.meet-baxio__content
+  .wrapper-ingresse
+  .wrapper-ingresse__button
+  .logo-ingresse {
   display: flex;
   flex-direction: column;
   height: 100%;
