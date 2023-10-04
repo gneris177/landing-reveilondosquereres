@@ -1,4 +1,5 @@
 .maps h2 {
+  margin: 0;
   text-align: center;
 }
 
@@ -11,4 +12,34 @@ h2 img {
     height: 2rem;
     width: auto;
   }
+}
+
+.maps .location-container {
+  display: flex;
+  justify-content: center;
+}
+
+.maps .location {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0 32px;
+}
+
+.maps .location__origin, .maps .location__destination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "montserrate-thin";
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+
+.maps .location__dot {
+  display: flex;
+  flex-direction: column;
+  font-family: "montserrate-light";
+  line-height: 8px;
+  margin-left: 4px;
 }

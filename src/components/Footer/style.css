@@ -1,6 +1,3 @@
-.footer {
-}
-
 .footer__content-main {
   position: relative;
   display: flex;
@@ -75,10 +72,6 @@
 	.footer__content-main .info div:nth-child(1) {
 		padding-left: 0 !important;
 	}
-}
-
-.footer__content-main .info div:nth-child(1) {
-	/* padding-left: 112px; */
 }
 
 .footer__content-main .info__text {

@@ -1,17 +1,18 @@
 import Container from '../Container'
-import image1 from '../../assets/images/FOTO-01.png'
-import image2 from '../../assets/images/FOTO-02.png'
-import image3 from '../../assets/images/FOTO-04.png'
+import image1 from '../../assets/images/instagram/01.png'
+import image2 from '../../assets/images/instagram/02.png'
+import image3 from '../../assets/images/instagram/03.png'
+import image4 from '../../assets/images/instagram/04_1.png'
 import arrowLeft from '../../assets/images/SETA_esquerda.png'
 import arrowRight from '../../assets/images/SETA_direita.png'
 import grafismo from '../../assets/images/GRAFISMO_ondas.png'
 import './style.css'
 
 const images = [
-  { img: image1, alt: '' },
-  { img: image2, alt: '' },
-  { img: image1, alt: '' },
-  { img: image3, alt: '' },
+  { img: image1, alt: 'Post instagram' },
+  { img: image2, alt: 'Post instagram' },
+  { img: image3, alt: 'Post instagram' },
+  { img: image4, alt: 'Post instagram' },
 ]
 
 const SectionPosts = () => {

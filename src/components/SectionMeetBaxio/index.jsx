@@ -3,6 +3,7 @@ import "./style.css";
 import logoIngresse from "../../assets/images/ingresse.png";
 import imageGrafismo from "../../assets/images/GRAFISMO.png";
 import titleImageBaixio from "../../assets/images/conhecabaixio.png";
+import bgVideo from "../../assets/images/bg-video.png";
 
 const SectionMeetBaxio = () => {
   return (
@@ -39,7 +40,7 @@ const SectionMeetBaxio = () => {
                 <img src={titleImageBaixio} />
               </h2>
               <div className="column">
-                <video src="https://res.cloudinary.com/dm9xltw2g/video/upload/f_auto:video,q_auto/v1/landing-quereres/fcvpwbj5wqjukua4qx5w" controls></video>
+                <video poster={bgVideo} src="https://res.cloudinary.com/dm9xltw2g/video/upload/f_auto:video,q_auto/v1/landing-quereres/fcvpwbj5wqjukua4qx5w" controls></video>
                 <div className="wrapper-link">
                   <p className="text">Clique e conheça <br /> mais sobre o Baixio.</p>
                   <a rel="noopener noreferrer" href="http://www.baixioturismo.com.br/" target="_blank">

@@ -15,7 +15,7 @@
   border: 2.3px solid #000;
   font-family: 'montserrate-bold';
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .meet-baxio__content .wrapper-ingresse {
@@ -132,6 +132,7 @@ button {
   font-family: 'montserrate-thin';
   font-weight: 600;
   letter-spacing: 2px;
+  font-size: 14px;
 }
 
 .column {

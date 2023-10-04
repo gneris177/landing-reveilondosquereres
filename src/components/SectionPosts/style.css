@@ -14,23 +14,25 @@
   max-width: 100%;
   position: relative;
 }
+
 .posts__content::-webkit-scrollbar {
   visibility: hidden;
 }
 
 .wrapper-arrow-right {
   position: relative;
-  display: flex; 
+  display: flex;
   justify-content: end;
 }
 
-.wrapper-arrow-right .arrow-right{
+.wrapper-arrow-right .arrow-right {
   right: -32px;
   position: absolute;
-  text-align: end;  
+  text-align: end;
 }
+
 @media (max-width: 992px) {
-  .wrapper-arrow-right .arrow-right{
+  .wrapper-arrow-right .arrow-right {
     display: none;
   }
 }
@@ -39,19 +41,21 @@
   position: relative;
 }
 
-.wrapper-arrow-left .arrow-left{
+.wrapper-arrow-left .arrow-left {
   left: -40px;
   bottom: -300px;
   position: absolute;
-  text-align: end;  
+  text-align: end;
 }
+
 @media (max-width: 992px) {
-  .wrapper-arrow-left .arrow-left{
+  .wrapper-arrow-left .arrow-left {
     display: none;
   }
 }
 
-.arrow-left, .arrow-right {
+.arrow-left,
+.arrow-right {
   max-width: 80px;
 }
 
@@ -61,6 +65,11 @@
   object-position: center;
   z-index: 1;
   width: 100%;
+}
+
+.posts__content img:nth-child(3) {
+  height: 106%;
+  margin-bottom: 24px;
 }
 
 .post__background-image {
@@ -83,28 +92,27 @@
   top: -48px;
   cursor: pointer;
 }
+
 @media (max-width: 768px) {
   .instagram {
     width: 140px;
     height: 140px;
     top: -128px;
   }
-
 }
 
 .instagram::after {
-  content: "instagram";
+  content: 'instagram';
   position: absolute;
   left: 50%;
   bottom: 50%;
   transform: translate(-50%, 50%);
   text-transform: uppercase;
-  font-family: "montserrate-bold";
+  font-family: 'montserrate-bold';
   font-size: 12px;
   letter-spacing: 4px;
   color: #000;
 }
-
 
 .instagram-quereres {
   position: absolute;
@@ -117,6 +125,7 @@
   top: -48px;
   cursor: pointer;
 }
+
 @media (max-width: 768px) {
   .instagram-quereres {
     top: initial;
@@ -125,23 +134,24 @@
 }
 
 .instagram-quereres::after {
-  content: "@quereres";
+  content: '@reveillondosquereres';
   position: absolute;
   left: 50%;
   bottom: 50%;
   transform: translate(-50%, 50%);
-  font-family: "montserrate-bold";
+  font-family: 'montserrate-bold';
   letter-spacing: 4px;
   color: #000;
 }
+
 @media (max-width: 992px) {
   .instagram-quereres::before {
-    content: "@quereres";
+    content: '@reveillondosquereres';
     position: absolute;
     left: 50%;
     bottom: 50%;
     transform: translate(-50%, 50%);
-    font-family: "montserrate-bold";
+    font-family: 'montserrate-bold';
     letter-spacing: 4px;
     color: #000;
   }
